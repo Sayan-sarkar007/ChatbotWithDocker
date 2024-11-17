@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "langchain1"
+name = "chatbot"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Sayan Sarkar <60515377+Sayan-sarkar007@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -13,7 +13,6 @@ yfinance = "^0.2.44"
 matplotlib = "^3.9.2"
 langchain = "^0.3.3"
 langchain-community = "^0.3.2"
-
 
 [build-system]
 requires = ["poetry-core"]
