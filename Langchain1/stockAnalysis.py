@@ -30,6 +30,7 @@ def Analyze_Stock(stock_name):
 
     prompt_template = """
     You are an AI stock analyst. Given the following stock data, provide a comprehensive analysis, including:
+    - First print the Stock name and the current price
     - Key trends and patterns
     - Indicators to consider (like moving averages, P/E ratio, etc.)
     - Suggestions for investors.

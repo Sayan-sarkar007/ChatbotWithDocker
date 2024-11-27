@@ -14,7 +14,8 @@ def home():
 
 @app.route('/stockAnalyze/<string:stockName>')
 def stockAnalyze(stockName):
-     result = Analyze(stockName)
+     Stock = stockName+".NS"
+     result = Analyze(Stock)
      return result
 
 if __name__ == "__main__":
