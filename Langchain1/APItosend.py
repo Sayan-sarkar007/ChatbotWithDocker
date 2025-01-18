@@ -2,7 +2,7 @@ from stockAnalysis import  Analyze_Stock as Analyze
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -16,9 +16,9 @@ def home():
 def stockAnalyze(stockName):
      Stock = stockName+".NS"
      result = Analyze(Stock)
-     return result
+     return render_template("stock_analysis.html", result=result, stockName= Stock)
 
 if __name__ == "__main__":
     # Get port from environment variable or use default
     port = int(os.getenv("PORT"))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug = True)

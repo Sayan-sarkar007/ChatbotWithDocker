@@ -1,5 +1,4 @@
 from langchain_google_genai import GoogleGenerativeAI
-from langchain import OpenAI
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
@@ -10,6 +9,7 @@ def Analyze_Stock(stock_name):
 
     load_dotenv()
 
+    Stock_name = stock_name
     # Step 1: Fetch stock data using yfinance
     # reliance = yf.Ticker("RELIANCE.NS")
     # hist = reliance.history(period="1mo")
@@ -30,7 +30,7 @@ def Analyze_Stock(stock_name):
 
     prompt_template = """
     You are an AI stock analyst. Given the following stock data, provide a comprehensive analysis, including:
-    - First print the Stock name and the current price
+    - First print the Stock current price
     - Key trends and patterns
     - Indicators to consider (like moving averages, P/E ratio, etc.)
     - Suggestions for investors.
