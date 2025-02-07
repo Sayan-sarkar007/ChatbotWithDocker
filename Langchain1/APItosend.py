@@ -1,5 +1,6 @@
 from stockAnalysis import Analyze_Stock as Analyze
 from dotenv import load_dotenv
+from waitress import serve
 
 load_dotenv()
 import os
@@ -72,5 +73,8 @@ def stock_analyze():
 
 if __name__ == "__main__":
     # Get port from environment variable or use default
-    port = int(os.getenv("PORT"))
-    app.run(debug=True)
+    # port = int(os.getenv("PORT"))
+    # app.run(debug=True)
+
+    # For Prod
+    serve(app, host="0.0.0.0", port=8000)
